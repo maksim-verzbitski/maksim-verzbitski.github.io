@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Shooter</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    //background-color: black;
+    background-size: cover;
+    background: url("images/space4.gif");
+    visibility: hidden;
+  }
+  p{
+    font-family: 'Press Start 2P';
+    font-size: 72px;
+    margin: 0px;
+  }
+  #board {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+    border: 2px solid white;
+    //background-color: black;
+    background: url("images/space3.gif");
+    overflow: hidden;
+  }
+
+  #jet {
+    position: absolute;
+
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background: url("images/korabl.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    bottom: 0px;
+    visibility: hidden;
+  }
+
+  .bullets {
+    position: absolute;
+    bottom: 40px;
+    //left: 51%;
+    width: 30px;
+    height: 30px;
+    background: url("images/fireball.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .rocks {
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    height: 50px;
+    background: url("images/alien2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #points {
+    font-family: 'Press Start 2P';
+    position: absolute;
+    top: 62px;
+    //margin: 40px;
+    margin-left: 250px;
+    //opacity: 0.7;
+    font-size: 2em;
+    color: white;
+  }
+  #score {
+    font-family: 'Press Start 2P';
+    position :absolute;
+    top: 20px;
+    margin: 40px;
+    color: white;
+  }
+  marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: #8ebf42;
+      font-family: sans-serif;
+    }
+</style>
+<script src="app.js" defer></script>
+
+
+<body>
+  <button  id="ebala"  onclick="startGame()" style="visibility: visible;position: absolute; width: 100% ;height: 100%; padding: 20% ;margin: auto; border: 10px; background: url(space4.gif);"><p  style="color: red; border:10px;">Начать игру</p></button>
+  <marquee  id = "marq" width=1500 behavior=scroll style="font-family: 'Press Start 2P', cursive;">
+      Это игра сделана по заказу Маргуса
+  </marquee>
+  <div id="board">
+    <div class="rocks"></div>
+    <div id="jet"></div>
+  </div>
+  <h1 id="score" style="font-family: 'Press Start 2P', cursive; ">Score:</h1>
+    <div id="points" style="font-family: 'Press Start 2P', cursive; color:magenta ;">0</div>
+</body>
+</html>
+<!--
+document.getElementById("board").style = "position:relative;width:500px;height:500px;margin:40px auto;border: 2px solid white; background-color: black; overflow: hidden;"
+document.getElementById("rocks").style = "position: absolute;top: 0px;width: 50px; height: 50px; background: url('alien.png'); background - size: contain; background - repeat: no - repeat;"
+document.getElementById("jet").style = "position: absolute;width: 40px;height: 40px;background: url('rocket.png');background-size: contain;background-repeat: no-repeat;left: 50%;bottom: 30px;"
+document.body.style="width: 100%; overflow: hidden;background-size: cover;"
+document.bullets.style = "position: absolute;bottom: 70px;left: 51%;width: 30px;height: 20px;background: url('bullet.png');background-size: contain;background-repeat: no-repeat;"
+button.style.display = "none"; 
+-->
